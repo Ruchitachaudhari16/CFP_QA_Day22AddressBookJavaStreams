@@ -1,11 +1,17 @@
 public class Person {
     /* Java Streams*/
+    String name;
+    String address;
+    String city;
+    String state;
 
-    private String name;
-
-    public Person(String name) {
+    public Person(String name, String address, String city, String state) {
         this.name = name;
+        this.address=address;
+        this.city=city;
+        this.state=state;
     }
+
 
     // Override equals method to check for duplicates based on name
     @Override
@@ -16,8 +22,21 @@ public class Person {
         return name.equals(person.name);
     }
     // Getter for name
-    public String getName() {
+    public String getName() { //getter method for Name
         return name;
     }
+
+    public String getAddress() { //getter method for address
+
+        return address;
+    }
+    public String getCity() {
+        return city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
 }
 
