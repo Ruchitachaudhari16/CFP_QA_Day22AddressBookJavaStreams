@@ -93,6 +93,11 @@ Address Book - Duplicate Check is done*/
                 .filter(person -> person.getState().equals(state))
                 .count();
     }
+//UC 11:-
+// Method to sort persons alphabetically by name
+public void sortPersonsByName() {
+    Collections.sort(persons);
+}
 
 
 }

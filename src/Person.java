@@ -1,4 +1,4 @@
-public class Person {
+public class Person  implements  Comparable<Person>{
     /* Java Streams*/
     String name;
     String address;
@@ -36,6 +36,21 @@ public class Person {
 
     public String getState() {
         return state;
+    }
+    //UC11:-
+    @Override
+    public int compareTo(Person other) {
+        return this.name.compareTo(other.name);
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                '}';
     }
 
 }

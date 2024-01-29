@@ -72,6 +72,17 @@ the city or state Use Java Streams */
         long countByState = addressBookManager.countPersonsByStateAcrossAddressBooks("MH");
         System.out.println("Count of persons in 'MH': " + countByState);
 
+//UC 11:-Ability to sort the entries in the
+//address book alphabetically by
+//Person’s name
+        // Sort persons in the address book by name
+        addressBook.sortPersonsByName();
+
+        // Print sorted persons
+        System.out.println("Sorted Persons:");
+        for (Person person : addressBook.persons) {
+            System.out.println(person);
+        }
 
     }
 }
