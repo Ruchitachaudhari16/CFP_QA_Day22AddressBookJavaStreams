@@ -83,6 +83,19 @@ the city or state Use Java Streams */
         for (Person person : addressBook.persons) {
             System.out.println(person);
         }
+        //UC12:-Ability to sort the entries in the address book by City,state  Write functions to sort person by City, State or Zip - Use Collection Library for Sorting - Use Java Streams
+
+        // Sort persons in the address book by City
+        List<Person> personsSortedByCity = addressBook.sortPersonsByCity();
+        System.out.println("Sorted Persons by City:");
+        personsSortedByCity.forEach(System.out::println); //it will print person by city :: used as a foreach
+
+        // Sort persons in the address book by State
+        List<Person> personsSortedByState = addressBook.sortPersonsByState();
+        System.out.println("Sorted Persons by State:");
+        personsSortedByState.forEach(System.out::println);
+
+
 
     }
 }

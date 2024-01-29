@@ -98,6 +98,20 @@ Address Book - Duplicate Check is done*/
 public void sortPersonsByName() {
     Collections.sort(persons);
 }
+//UC 12:-  // Method to sort persons by City using Java Streams
+// Method to sort persons by City using Java Streams
+public List<Person> sortPersonsByCity() {
+    return persons.stream()
+            .sorted(Comparator.comparing(Person::getCity))
+            .collect(Collectors.toList());
+}
+
+    // Method to sort persons by State using Java Streams
+    public List<Person> sortPersonsByState() {
+        return persons.stream()
+                .sorted(Comparator.comparing(Person::getState))
+                .collect(Collectors.toList());
+    }
 
 
 }

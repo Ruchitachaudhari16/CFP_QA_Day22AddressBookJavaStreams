@@ -5,6 +5,7 @@ public class Person  implements  Comparable<Person>{
     String city;
     String state;
 
+
     public Person(String name, String address, String city, String state) {
         this.name = name;
         this.address=address;
