@@ -5,7 +5,7 @@ import java.util.List;
 
     public class AddressBookManager {
         /* UC 8*/
-        private List<AddressBook> addressBooks = new ArrayList<>();
+        public  List<AddressBook> addressBooks = new ArrayList<>();
 
         // Method to add an AddressBook to the manager
         public void addAddressBook(AddressBook addressBook) {
@@ -25,6 +25,7 @@ import java.util.List;
                     .flatMap(addressBook -> addressBook.searchPersonsByState(state).stream())
                     .collect(Collectors.toList());
         }
+
     }
 
 
