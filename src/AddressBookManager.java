@@ -25,6 +25,20 @@ import java.util.List;
                     .flatMap(addressBook -> addressBook.searchPersonsByState(state).stream())
                     .collect(Collectors.toList());
         }
+        //UC10:-
+        // Method to count persons by city across all AddressBooks
+        public long countPersonsByCityAcrossAddressBooks(String city) {
+            return addressBooks.stream()
+                    .mapToLong(addressBook -> addressBook.countPersonsByCity(city))
+                    .sum();
+        }
+
+        // Method to count persons by state across all AddressBooks
+        public long countPersonsByStateAcrossAddressBooks(String state) {
+            return addressBooks.stream()
+                    .mapToLong(addressBook -> addressBook.countPersonsByState(state))
+                    .sum();
+        }
 
     }
 

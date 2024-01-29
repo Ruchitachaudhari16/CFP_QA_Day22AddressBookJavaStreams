@@ -79,8 +79,23 @@ Address Book - Duplicate Check is done*/
         public List<Person> viewPersonsByState(String state) {
             return stateDictionary.getOrDefault(state, Collections.emptyList());
         }
-
+        //UC10:-
+        // Method to count persons by city
+        public long countPersonsByCity(String city) {
+            return persons.stream()
+                    .filter(person -> person.getCity().equals(city))
+                    .count();
         }
+
+    // Method to count persons by state
+    public long countPersonsByState(String state) {
+        return persons.stream()
+                .filter(person -> person.getState().equals(state))
+                .count();
+    }
+
+
+}
 
 
 

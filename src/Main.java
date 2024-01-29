@@ -63,9 +63,14 @@ the city or state Use Java Streams */
                 List<Person> personsInMaharashtra = addressBook.viewPersonsByState("Maharastra");
                 System.out.println("Persons in Maharashtra: "+personsInMaharashtra);
 
-        // View persons by city from the addressBook instance, not addressBookManager
-      /*  List<Person> personsInPune = addressBook.viewPersonsByCity("Pune");
-        System.out.println("Persons in Pune: " +personsInPune);*/
+       //UC10:-
+        // Count persons by city across all address books
+        long countByCity = addressBookManager.countPersonsByCityAcrossAddressBooks("Pune");
+        System.out.println("Count of persons in 'Pune': " + countByCity);
+
+        // Count persons by state across all address books
+        long countByState = addressBookManager.countPersonsByStateAcrossAddressBooks("MH");
+        System.out.println("Count of persons in 'MH': " + countByState);
 
 
     }
